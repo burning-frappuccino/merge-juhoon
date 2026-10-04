@@ -29,6 +29,9 @@
   var startButton = document.getElementById("start-button");
   var restartButton = document.getElementById("restart-button");
   var shareButton = document.getElementById("share-button");
+  var tipButton = document.getElementById("tip-button");
+  var tipModal = document.getElementById("tip-modal");
+  var tipClose = document.getElementById("tip-close");
   var soundButton = document.getElementById("sound-toggle");
   var scoreNode = document.getElementById("score");
   var bestNode = document.getElementById("best");
@@ -565,6 +568,14 @@
   startButton.addEventListener("click", startGame);
   restartButton.addEventListener("click", startGame);
   shareButton.addEventListener("click", shareResult);
+  tipButton.addEventListener("click", function () {
+    if (typeof tipModal.showModal === "function") tipModal.showModal();
+    else tipModal.setAttribute("open", "");
+  });
+  tipClose.addEventListener("click", function () { tipModal.close(); });
+  tipModal.addEventListener("click", function (event) {
+    if (event.target === tipModal) tipModal.close();
+  });
   soundButton.addEventListener("click", toggleSound);
   window.addEventListener("resize", resizeLayers);
   document.addEventListener("visibilitychange", function () {

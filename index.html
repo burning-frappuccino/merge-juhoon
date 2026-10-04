@@ -60,12 +60,24 @@
             <button id="restart-button" class="primary-button" type="button">再来一局</button>
             <button id="share-button" class="secondary-button" type="button">分享战绩</button>
           </div>
+          <button id="tip-button" class="tip-button" type="button">请作者吃饱辣条吗？</button>
         </section>
       </div>
     </section>
 
     <p class="legal">非官方粉丝创作，与艺人及所属公司无关。图片版权归原权利人所有。</p>
   </main>
+
+  <dialog id="tip-modal" class="tip-modal" aria-labelledby="tip-title">
+    <div class="tip-modal-card">
+      <button id="tip-close" class="tip-close" type="button" aria-label="关闭">×</button>
+      <span class="eyebrow">小小补给</span>
+      <h2 id="tip-title">请作者吃饱辣条吗？</h2>
+      <p>如果这个小游戏让你开心，可以请作者吃一包辣条。</p>
+      <img src="./assets/tip-qr.webp" alt="微信支付收款码">
+      <small>微信扫一扫 · ¥1.00</small>
+    </div>
+  </dialog>
 
   <script src="./matter.min.js"></script>
   <script src="./levels.js"></script>

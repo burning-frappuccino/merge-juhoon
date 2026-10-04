@@ -380,6 +380,96 @@ button { font: inherit; }
   gap: 10px;
 }
 
+.tip-button {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  min-height: 42px;
+  margin-top: 10px;
+  border: 1px solid rgba(199, 91, 39, 0.38);
+  border-radius: 7px;
+  background: #fff4e9;
+  color: #b55829;
+  font-size: 13px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.tip-button:active { transform: translateY(1px); }
+
+.tip-modal {
+  width: min(88vw, 360px);
+  padding: 0;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  color: var(--ink);
+}
+
+.tip-modal::backdrop {
+  background: rgba(23, 24, 27, 0.54);
+  backdrop-filter: blur(3px);
+}
+
+.tip-modal-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 22px 20px;
+  border: 1px solid rgba(23, 24, 27, 0.12);
+  border-radius: 10px;
+  background: #fffdf8;
+  box-shadow: 0 20px 54px rgba(23, 24, 27, 0.25);
+  text-align: center;
+}
+
+.tip-modal-card .eyebrow { color: #c26734; }
+
+.tip-modal-card h2 {
+  margin: 8px 0 5px;
+  font-size: 22px;
+  line-height: 1.2;
+}
+
+.tip-modal-card p {
+  margin: 0 0 14px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.tip-modal-card img {
+  width: min(100%, 260px);
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 7px;
+  background: #08c468;
+}
+
+.tip-modal-card small {
+  margin-top: 9px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.tip-close {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #f0eee8;
+  color: var(--ink);
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+}
+
 .burst {
   position: absolute;
   width: 7px;
