@@ -107,7 +107,9 @@
     board.classList.add("playing");
     board.classList.remove("cooldown");
 
-    engine = Engine.create({ enableSleeping: true });
+    // Do not let Matter.js sleep balls while they are still falling.
+    // On mobile browsers the low-speed sleep heuristic can leave a ball suspended mid-air.
+    engine = Engine.create({ enableSleeping: false });
     engine.gravity.y = 1.05;
     engine.gravity.scale = 0.001;
     addWalls();
