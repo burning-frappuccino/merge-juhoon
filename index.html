@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#f8f7f1">
+  <meta name="description" content="合成金主训：一款非官方粉丝合成小游戏。">
+  <title>合成金主训</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar" aria-label="游戏信息">
+      <div class="brand">
+        <span class="brand-kicker">JUHOON MERGE</span>
+        <strong>合成金主训</strong>
+      </div>
+      <div class="scoreboard">
+        <div><span>得分</span><strong id="score">0</strong></div>
+        <div><span>最高</span><strong id="best">0</strong></div>
+      </div>
+    </header>
+
+    <section class="game-panel" aria-label="合成游戏区域">
+      <div class="game-meta">
+        <div class="next-label">下一个</div>
+        <div id="next-ball" class="next-ball" aria-label="下一个造型"></div>
+        <div id="combo" class="combo" aria-live="polite"></div>
+        <button id="sound-toggle" class="icon-button" type="button" aria-label="关闭音效" title="音效">♪</button>
+      </div>
+
+      <div id="board" class="board" aria-label="点击或拖动选择下落位置">
+        <div id="danger-line" class="danger-line"><span>危险线</span></div>
+        <div id="drop-guide" class="drop-guide" aria-hidden="true"></div>
+        <div id="ball-layer" class="ball-layer"></div>
+        <div id="burst-layer" class="burst-layer" aria-hidden="true"></div>
+
+        <section id="start-screen" class="screen start-screen">
+          <div class="start-copy">
+            <span class="eyebrow">11 STAGES · ONE JUHOON</span>
+            <h1>合成<br>金主训</h1>
+            <p>从新人卡一路合到全球大势。<br>同样的主训，不同的心动暴击。</p>
+          </div>
+          <div class="start-visual" aria-hidden="true">
+            <div class="orbit orbit-one"></div>
+            <div class="orbit orbit-two"></div>
+            <img src="./assets/juhoon-final.webp" alt="">
+          </div>
+          <button id="start-button" class="primary-button" type="button">开始合成</button>
+          <small>手机单指操作 · 今日顺序固定</small>
+        </section>
+
+        <section id="gameover-screen" class="screen gameover-screen" hidden>
+          <span class="eyebrow">本轮心动报告</span>
+          <h2 id="result-title">差一点就出道</h2>
+          <div class="result-score"><strong id="final-score">0</strong><span>分</span></div>
+          <p id="result-copy"></p>
+          <div class="result-actions">
+            <button id="restart-button" class="primary-button" type="button">再来一局</button>
+            <button id="share-button" class="secondary-button" type="button">分享战绩</button>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <p class="legal">非官方粉丝创作，与艺人及所属公司无关。图片版权归原权利人所有。</p>
+  </main>
+
+  <script src="./matter.min.js"></script>
+  <script src="./levels.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>
